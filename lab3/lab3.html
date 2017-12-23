@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lab 3</title>
+    <link rel="stylesheet" href="css/lab3.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="shell">
+        <h1>Boulder Farmers Market</h1>
+        <p>This week's AD of Boulder Farmers Market, generate a shopping list before you go shopping, have
+            a nice weekend!
+            <div id="container">
+                <div id="shopping_container">
+                    <div id="special_offer">
+                        <h2>Today's special offer</h2>
+                        <img id="specialOffer_img" src="img/special1.jpg" alt="special offer">
+                    </div>
+                    <div id="shopping_section">
+                        <h2>Toady's fresh products</h2>
+                        <div id="shopping_imgs">
+                            <div class="shopping_gallery">
+                                <img class="products" src="img/BeanSprouts.png" alt="Bean Sprouts">
+                                <p class="description">Bean Sprouts</p>
+                            </div>
+                            <div class="shopping_gallery">
+                                <img class="products" src="img/BeansStringless.png" alt="Beans Stringless">
+                                <p class="description">Beans Stringless</p>
+                            </div>
+                            <div class="shopping_gallery">
+                                <img class="products" src="img/BeetrootBunch.png" alt="Beetroot Bunch">
+                                <p class="description">Beetroot Bunch</p>
+                            </div>
+                            <div class="shopping_gallery">
+                                <img class="products" src="img/BokChoy.png" alt="Bok Choy">
+                                <p class="description">Bok Choy</p>
+                            </div>
+                            <div class="shopping_gallery">
+                                <img class="products" src="img/BokchoyFreshBunch.png" alt="Bokchoy Fresh Bunch">
+                                <p class="description">Bokchoy Fresh Bunch</p>
+                            </div>
+                            <div class="shopping_gallery">
+                                <img class="products" src="img/Broccoli.png" alt="Broccoli">
+                                <p class="description">Broccoli</p>
+                            </div>
+                            <div class="shopping_gallery">
+                                <img class="products" src="img/BrusselSprouts.png" alt="Brussel Sprouts">
+                                <p class="description">Brussel Sprouts</p>
+                            </div>
+                            <div class="shopping_gallery">
+                                <img class="products" src="img/ButternutPumpkin.png" alt="Butternut Pumpkin">
+                                <p class="description">Butternut Pumpkin</p>
+                            </div>
+                            <div class="shopping_gallery">
+                                <img class="products" src="img/BeanSprouts.png" alt="Bean Sprouts.png">
+                                <p class="description">Bean Sprouts</p>
+                            </div>
+                            <div class="shopping_gallery">
+                                <img class="products" src="img/CabbageQuarter.png" alt="Cabbage Quarter">
+                                <p class="description">Cabbage Quarter</p>
+                            </div>
+                            <div class="shopping_gallery">
+                                <img class="products" src="img/CapsicumsPrePack.png" alt="Capsicums PrePack">
+                                <p class="description">Capsicums PrePack</p>
+                            </div>
+                            <div class="shopping_gallery">
+                                <img class="products" src="img/Carrots.png" alt="Carrots">
+                                <p class="description">Carrots</p>
+                            </div>
+                            <div class="shopping_gallery">
+                                <img class="products" src="img/CauliflowerWhole.png" alt="CauliflowerWhole">
+                                <p class="description">Cauliflower Whole</p>
+                            </div>
+                            <div class="shopping_gallery">
+                                <img class="products" src="img/Celery.png" alt="Celery">
+                                <p class="description">Celery</p>
+                            </div>
+                            <div class="shopping_gallery">
+                                <img class="products" src="img/ChineseCabbage.png" alt="Chinese Cabbage">
+                                <p class="description">Chinese Cabbage</p>
+                            </div>
+                            <div class="shopping_gallery">
+                                <img class="products" src="img/CocktailTomatoes.png" alt="Cocktail Tomatoes">
+                                <p class="description">Cocktail Tomatoes</p>
+                            </div>
+                            <div class="shopping_gallery">
+                                <img class="products" src="img/Corn.png" alt="Corn">
+                                <p class="description">Corn</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="cart_container">
+                    <h2>Shopping Cart</h2>
+                    <ul id="shoppingList">
+                        <li class="listItem">Empty</li>
+                    </ul>
+                    <p>Click to remove from the list</p>
+                    <form>
+                        <input id="genBtn" type="button" name="generateList" value="GENERATE">
+                    </form>
+                    <h2>Shopping List</h2>
+                    <div id="generated_list">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <script type="text/javascript" src="js/lab3.js"></script>
+</body>
+
+</html>

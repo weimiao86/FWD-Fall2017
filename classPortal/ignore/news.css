@@ -1,0 +1,11 @@
+
+body {
+  margin: 5px;
+  background-repeat:repeat-x repeat-y;
+  background-image: url("../media/img/aboutMe/home_bg.jpg");
+  z-index: -2;
+}
+
+div#main_shell{
+  padding-left: 10px;
+}

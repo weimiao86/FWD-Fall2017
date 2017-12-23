@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>About Me | Wei Miao</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="media/img/homeImg/wm.jpg">
+  <link rel="stylesheet" href="css/aboutMe_style.css" type="text/css">
+</head>
+
+<body>
+  <div id="main_shell">
+    <div id="content_me">
+      <h1>About me</h1>
+      <p>I am a first year master student in Creative Technologies + Design track (CTD) at CU ATLAS. I have the background in Comptuter Science and I am very interested in Robotics.
+      </p>
+      <p>I have some development experience with micro-controllers and diigtal sensors, and ever led the design and development of <a href="http://www.robauto.co/" target="_blank">BiBli</a> robot.</p>
+      <p>I am also familiar with mobile app development and 3D design with SolidWorks.</p>
+    </div>
+
+    <div id="img_section">
+      <img class="mySlides" src="media/img/aboutMe/owi.jpg" alt="my projects img">
+      <img class="mySlides" src="media/img/aboutMe/bibli1.jpg" alt="my projects img">
+      <img class="mySlides" src="media/img/aboutMe/bibli2.jpg" alt="my projects img">
+      <img class="mySlides" src="media/img/aboutMe/bibli3.jpg" alt="my projects img">
+      <img class="mySlides" src="media/img/aboutMe/mirabot.jpg" alt="my projects img">
+    </div>
+    <script>
+      var myIndex = 0;
+      carousel();
+
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+          myIndex = 1
+        }
+        x[myIndex - 1].style.display = "inline";
+        setTimeout(carousel, 3000); // Change image every 2 seconds
+      }
+    </script>
+    <div class="after-box"></div>
+  </div>
+</body>
+
+</html>

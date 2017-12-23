@@ -1,0 +1,44 @@
+body {
+  margin: 0px;
+  background-color: white;
+}
+
+div#shell {
+  max-width: 90%;
+  margin: 5px auto;
+}
+
+div#filter_section {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+h1 {
+  text-align: center;
+}
+
+select {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+
+button {
+  font-size: 1.2em;
+  border-radius: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  cursor: default;
+  max-width: 50%;
+  text-align: justify;
+}
+
+img {
+  max-width: 40%;
+}

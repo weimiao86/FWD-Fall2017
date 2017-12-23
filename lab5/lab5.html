@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab5</title>
+    <link rel="stylesheet" href="css/lab5.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous">
+    </script>
+  </head>
+
+  <body>
+    <div class="shell">
+      <h1>Online Album</h1>
+      <div id="login_sction">
+        <span id="user_info" class="login_space"></span>
+        <button id="login" class="login_space" type="button" name="button">Sign in</button>
+        <button id="logout" class="login_space" type="button" name="button">Sign out</button>
+      </div>
+
+      <div id="upload_section">
+        <form>
+          <label for="choose_file">Please select a photo to upload:</label>
+          <input type="file" id="choose_file" value="upload"><br>
+          <label for="imgDesc">Please add a description:</label>
+          <input type="text" id="imgDesc" name="imgDescription" value=""><br>
+          <button id="upload_btn" type="button" name="button">upload</button>
+        </form>
+        <progress id="upload_prgs" value="0" max="100">0%</progress>
+      </div>
+
+      <div id="image_section">
+      </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDsGcoqPWaYf1CEn5MbeuWQ8Sf3KjVshLI",
+        authDomain: "fir-read-write-268de.firebaseapp.com",
+        databaseURL: "https://fir-read-write-268de.firebaseio.com",
+        projectId: "fir-read-write-268de",
+        storageBucket: "fir-read-write-268de.appspot.com",
+        messagingSenderId: "577016919112"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script type="text/javascript" src="js/lab5.js">
+    </script>
+  </body>
+
+</html>

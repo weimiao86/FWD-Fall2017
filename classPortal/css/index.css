@@ -1,0 +1,43 @@
+body {
+  margin: 0px;
+  background-image: url("../media/img/homeImg/home_bg2.jpg");
+}
+
+#shell {
+  padding: 0;
+  min-height: 92vh;
+  background-image: url("../media/img/aboutMe/home_bg.jpg");
+  background-repeat: repeat;
+}
+
+#head_container {
+  padding: 5px 5px;
+  margin-bottom: 0;
+  background-image: url("../media/img/homeImg/home_head.jpg");
+  background-size: 100% 100%;
+}
+
+#my_nav {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-image: url("../media/img/homeImg/nav3.jpg");
+}
+
+#project_gallery {
+  padding: 5px 5px;
+}
+
+footer {
+  background-image: url("../media/img/homeImg/nav3.jpg");
+}
+
+#socialIcon {
+  margin-bottom: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+iframe {
+  min-width: 90%;
+  height: 315px;
+}

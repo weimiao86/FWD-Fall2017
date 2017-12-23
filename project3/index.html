@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+      integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+
+    <title>Vue Trivia</title>
+  </head>
+
+  <body>
+    <div class="container pt-3" id="whole">
+
+      <header class="">
+        <h1 class="text-center">Vue Trivia</h1>
+      </header>
+
+      <main class="mt-2" id="app" >
+        <!-- player and score section -->
+
+        <div class="container" >
+          <div class="p-3" id="players">
+            
+            <div class="row" id="playerArea">
+              <!-- player1 -->
+              <div class="col-2" id="player1_profile">
+                <img src="img/tom.jpg" alt="player1" class="img-thumbnail playerProfile">
+              </div>
+
+              <!-- score difference bar -->
+              <div class="col-8 text-center " id="score_difference" >
+                <div id="score_dif" class="progress" style="height:70px">
+                  <div class="progress-bar bg-success" v-bind:style="{ width: progress +'%'}">
+                  </div>
+                  <div class="progress-bar bg-danger" v-bind:style="{ width:  (100-progress) +'%'}">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col p-2">
+                    <img src="img/left-arrow.gif" alt="turn" id="player1_turn" class="img-fluid rounded-circle playerTurnIcon"
+                      v-bind:class="{ playerActive: p1inactive }">
+                  </div>
+                  <div class="col p-2">
+                    <h2 class="text-center">  {{p1score}} : {{p2score}} </h2>
+                  </div>
+                  <div class="col p-2">
+                    <img src="img/right-arrow.gif" alt="turn" id="player1_turn" class="img-fluid rounded-circle playerTurnIcon"
+                      v-bind:class="{ playerActive: p2inactive }">
+                  </div>
+                </div>
+              </div>
+
+              <!-- player2 -->
+              <div class="col-2 text-right" id="player2_profile">
+                <img src="img/jerry.jpg" alt="player2" class="img-thumbnail playerProfile">
+              </div>
+            </div>
+
+            
+          
+          <div class="text-center p-5" id="end">
+            <h2 class="text-center" id="displayWinner">{{winner}} wins!</h2>
+            
+            <button class="btn btn-primary mt-2" id="playAgain" @click="restart">
+              Play Again
+            </button>
+          </div>
+          </div>
+        </div>
+
+
+        <!-- game section -->
+        <div id="game" class="border border-primary  mt-2 p-3">
+          <!-- questions section -->
+          <div class="row" id="questions">
+            <div class="col text-center m-1 p-4 flip-container" id="easy_question" v-bind:class="{ flip: eActive }" :disabled="active=== true" @click="setQ">
+              <div class="flipper">
+                <div class="front">
+                  <button id="easy" class="questionButton " :disabled="active=== true" @click="setQ">100</button>
+                </div>
+                <div class="back p-3">
+                  {{currentQuestion}}
+                </div>
+              </div>
+              
+            </div>
+            <div class="col text-center m-1 p-4 flip-container" id="medium_question" v-bind:class="{ flip: mActive }" :disabled="active=== true" @click="setQ">
+              <div class="flipper">
+                <div class="front">
+                  <button id="medium" class="questionButton " :disabled="active=== true" @click="setQ">300</button>
+                </div>
+                <div class="back p-3">
+                  {{currentQuestion}}
+                </div>
+
+              </div>
+              
+            </div>
+            <div class="col text-center m-1 p-4 flip-container" id="hard_question" v-bind:class="{ flip: hActive }" :disabled="active=== true" @click="setQ">
+              <div class="flipper">
+                <div class="front">
+                  <button id="hard" class="questionButton " :disabled="active=== true" @click="setQ">500</button>
+                </div>
+                <div class="back p-3">
+                  {{currentQuestion}}
+                </div>
+              </div>
+              
+
+            </div>
+          </div>
+
+          <!-- answer section -->
+          <div class="row" id="answer_section">
+
+            <button class="col text-center m-1 p-2 answerButton" :id="option.tag" v-for="option in currentOptions" @click="submitAnswer">
+              {{option.value}}
+            </button>
+
+            <!-- <div class="col text-center border border-dark  m-1 p-2">
+              <span>Answer 2</span>
+            </div>
+            <div class="col text-center border border-dark  m-1 p-2">
+              <span>Answer 3</span>
+            </div>
+            <div class="col text-center border border-dark  m-1 p-2">
+              <span>Answer 4</span>
+            </div> -->
+
+          </div>
+
+          <!--
+          <div id="questions">
+            <div id="qButtons">
+              <button id="100" :disabled="active=== true" @click="setQ">100</button>
+              <button id="300" :disabled="active=== true" @click="setQ">300</button>
+              <button id="500" :disabled="active=== true" @click="setQ">500</button>
+            </div>
+          -->
+
+          <!-- todo
+          1. display question to the area according to is score value.
+          2. display answer option inro 4 divs
+         -->
+          <!-- <div id="qDisplay">
+            {{currentQuestion}}
+          </div> -->
+          <!-- <div id="answers">
+            <button :class="option.tag" v-for="option in currentOptions" @click="submitAnswer">
+                      {{option.value}}
+                    </button>
+          </div> -->
+
+        </div>
+    </div>
+
+
+    </main>
+
+      <!-- Modal -->
+      <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Welcome to Vue Trivia!</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              
+            </div>
+            <div class="modal-body">
+              <p>1. This is a two player game where the winner is determined by difference in score. The first player to get 1000 points ahead of the other wins. <br><br>2. Each player will take turns chosing questions. However, if a player gets a question wrong their oponent gets a chance to answer. <br><br>3. There are three levels of difficulty in the questions, where harder questions are worth more points.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="project3.js"></script>
+  </body>
+
+</html>

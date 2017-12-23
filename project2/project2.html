@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- title -->
+    <title>Job Hunting Assistant</title>
+    <link rel="icon" href="img/fav_icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+      integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!-- font-awesome icon -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- page CSS -->
+    <link rel="stylesheet" href="css/pro2.css">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+      crossorigin="anonymous"></script>
+
+  </head>
+
+  <body>
+    <div id="shell" class="container">
+      <!--  header section -->
+      <div id="header_section" class="jumbotron">
+        <div id="title_holder" class="row">
+          <div class="col-8">
+            <h1 id="title" class="display-4 text-light">Job Hunting <small class="text-warning">Assistant</small></h1>
+            <p class="text-uppercase text-dark">Managing your job application</p>
+          </div>
+          <div id="profile_section" class="col-4">
+            <img id="userImg" src="img/user_img.png" class="img-thumbnail" alt="">
+            <p id="greetingName" class="text-warning"></p>
+            <form>
+              <input type="file" id="choose_profileImg">
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- nav section -->
+      <div>
+        <ul class="nav nav-tabs" id="navTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="overview-tab" data-toggle="tab" href="#overview" aria-controls="overview"
+              aria-selected="true">OVERVIEW</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="app-tab" data-toggle="tab" href="#application" role="tab" aria-controls="application"
+              aria-selected="false">APPLICATION</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="doc-tab" data-toggle="tab" href="#documents" role="tab" aria-controls="documents"
+              aria-selected="false">DOCUMENTS</a>
+          </li>
+          <li class="nav-item ml-auto">
+            <button id="signInBtn" class="btn btn-outline-info" type="button" data-toggle="modal" data-target="#signInModal">Sign in</button>
+            <button id="signOutBtn" class="btn btn-outline-info" type="button">Sign out</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- body section -->
+      <div class="tab-content" id="navTabContent">
+        <!-- overview -->
+        <div id="overview" class="tab-pane fade show active" role="tabpanel" aria-labelledby="overview-tab">
+          <!-- user not sign in -->
+          <div id="pleaseSignIn" class="row">
+            <div class="col-6">
+              <img id="overview_img" class="img-fluid " src="img/job-hunter.jpg" alt="">
+            </div>
+            <div class="col-6">
+              <div id="overview_center2">
+                <h1 class="text-dark"><strong class="text-danger">Applying</strong> for jobs?</h1>
+                <h2 class="text-dark">Need a <strong class="text-warning">manager</strong> for your application?</h2>
+                <h2 class="text-dark">Sign in to <strong class="text-success">start!</strong></h2>
+              </div>
+            </div>
+          </div>
+          <!-- usr signed in -->
+          <div id="overview_info" class="text-center">
+            <div id="overview_center">
+              <h1>Welcome <span id="welcomeName" class="font-weight-bold font-italic text-info"></span></h1>
+              <h2>You have applied for <span id="positionNum" class="text-primary"></span> positions.</h2>
+              <h2>You have <span id="offerNum" class="text-primary"></span> offer in hand.</h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- application  -->
+        <div id="application" class="tab-pane fade" role="tabpanel" aria-labelledby="app-tab">
+          <div class="container">
+            <div id="app_view" class="row flex-row flex-nowrap">
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3 border border-secondary text-center jobapp">
+                <h3 class="text-center">To Apply</h3>
+                <button type="button" name="button" id="toAppAdd" class="btn btn-outline-info btn-sm">Add</button>
+                <ul id="comToApply" class="list-group companyList">
+
+                </ul>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3 border border-primary text-center jobapp">
+                <h3 class="text-center">Applied</h3>
+                <button type="button" name="button" id="appedAdd" class="btn btn-outline-info btn-sm">Add</button>
+                <ul id="comApplied" class="list-group companyList">
+
+                </ul>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3 border border-info text-center jobapp">
+                <h3 class="text-center">Online interview</h3>
+                <button type="button" name="button" id="olIntAdd" class="btn btn-outline-info btn-sm">Add</button>
+                <ul id="comOnline" class="list-group companyList">
+
+                </ul>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3 border border-success text-center jobapp">
+                <h3 class="text-center">Onsite interview</h3>
+                <button type="button" name="button" id="osIntAdd" class="btn btn-outline-info btn-sm">Add</button>
+                <ul id="comOnsite" class="list-group companyList">
+
+                </ul>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3 border border-danger text-center jobapp">
+                <h3 class="text-center">Rejected</h3>
+                <button type="button" name="button" id="rjctAdd" class="btn btn-outline-info btn-sm">Add</button>
+                <ul id="comRejected" class="list-group companyList">
+                </ul>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3 border border-warning  text-center jobapp">
+                <h3 class="text-center">Offer in hand</h3>
+                <button type="button" name="button" id="offerAdd" class="btn btn-outline-info btn-sm">Add</button>
+                <ul id="comOffered" class="list-group companyList">
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- application documents -->
+        <div id="documents" class="tab-pane fade" role="tabpanel" aria-labelledby="doc-tab">
+          <div class="text-center mrg_top">
+            <button type="button" name="button" id="doc_upload" class="btn btn-outline-dark btn-sm">Upload Document</button>
+          </div>
+          <div class="row mrg_top">
+            <div class="col text-center border border-success doc_div">
+              <h3>CV</h2>
+                <ul  id="cvList" class="list-group">
+                  <!-- <li class="list-group-item">First item <button type="button" class="close" value="112233">&times;</button></li> -->
+                </ul>
+            </div>
+            <div class="col text-center border border-info doc_div">
+              <h3>COVER LETTER</h2>
+                <ul id="coverList" class="list-group">
+
+                </ul>
+            </div>
+            <div class="col text-center border border-warning doc_div">
+              <h3>OTHER</h2>
+                <ul id="otherList" class="list-group">
+
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <footer class="footer">
+        <div class="container text-center">
+
+          <div class="row">
+            <div class="col text-center">
+              <a href="https://www.colorado.edu/career/" class="text-info" target="_blank">CU Career Services</a>
+            </div>
+            <div class="col text-center">
+              <a href="https://www.indeed.com/" class="text-info" target="_blank">Indeed</a>
+            </div>
+            <div class="col text-center">
+              <small class="text-dark">&copy; 2017 Wei Miao</small>
+            </div>
+            <div class="col text-center">
+              <a href="https://www.glassdoor.com/index.htm" class="text-info" target="_blank">Glassdoor</a>
+            </div>
+            <div class="col text-center">
+              <a href="https://www.monster.com/" class="text-info" target="_blank">Monster</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- sign in modal -->
+    <div class="modal fade" id="signInModal" role="dialog" aria-labelledby="signInModalLabel" aria-hidden="true">
+      <div class="modal-dialog ">
+        <div class="modal-content text-center">
+          <!-- Modal body -->
+          <div id="signInModal" class="modal-body">
+            <div class="container">
+              <div>
+                <ul class="nav nav-tabs" id="signINnavTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="signIn-tab" data-toggle="tab" href="#signIn_section" aria-controls="signIn_section"
+                      aria-selected="true">Sign In</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="register-tab" data-toggle="tab" href="#register_section" role="tab" aria-controls="register_section"
+                      aria-selected="false">Register</a>
+                  </li>
+                  <li class="nav-item ml-auto">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </li>
+                </ul>
+              </div>
+              <!-- sign in and register tabs -->
+              <div class="tab-content" id="signinTabContent">
+
+                <!-- sign in -->
+                <div id="signIn_section" class="tab-pane fade show active" role="tabpanel" aria-labelledby="signIn-tab">
+                  <form id="signinForm">
+                    <div class="form-group">
+                      <input type="email" class="form-control formNarrow" id="signINemail" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control formNarrow" id="signINpwd" placeholder="Password" required>
+                    </div>
+                    <button type="button" id="pwdSignIn" class="btn btn-outline-secondary">Sign In</button>
+                  </form>
+                </div>
+
+                <!-- register -->
+                <div id="register_section" class="tab-pane fade" role="tabpanel" aria-labelledby="register-tab">
+                  <form id="registerForm">
+                    <div class="form-group">
+                      <input type="text" class="form-control formNarrow" id="rgName" placeholder="User name" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="email" class="form-control formNarrow" id="rgEmail" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control formNarrow" id="rgPwd" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control formNarrow" id="pwdCheck" placeholder="Type in password again"
+                        required>
+                    </div>
+                    <button type="submit" id="pwdCreate" class="btn btn-outline-secondary">Create</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal footer -->
+          <div class="modal-footer text-center">
+            <div id="social_section">
+              <button type="button" id="googleBtn" class="btn btn-danger"><i class="fa fa-google" aria-hidden="true"></i></button>
+              <button type="button" id="facebookBtn" class="btn btn-primary"><i class="fa fa-facebook" aria-hidden="true"></i></button>
+              <button type="button" id="twitterBtn" class="btn btn-info"><i class="fa fa-twitter" aria-hidden="true"></i></button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Application manage modal -->
+    <div class="modal fade" id="appManageModal">
+      <div class="modal-dialog ">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 id="comTitle" class="modal-title"></h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form id="appManageForm">
+              <div class="form-group">
+                <label for="companyName">Company:</label>
+                <input type="text" class="form-control" id="companyName" placeholder="Company Name" required>
+              </div>
+              <div class="form-group">
+                <label for="positionName">Position:</label>
+                <input type="text" class="form-control" id="positionName" placeholder="Position" required>
+              </div>
+              <div class="form-group">
+                <label for="positionLink">Link:</label>
+                <input type="url" class="form-control" id="positionLink" placeholder="Application link" required>
+              </div>
+              <div class="form-group">
+                <label for="endDate">Deadline:</label>
+                <input type="date" class="form-control" id="endDate" min="2017-01-02">
+              </div>
+              <div id="appSubmiteDiv" class="form-group">
+                <label for="appSubmitDate">Application submit date:</label>
+                <input type="date" class="form-control" id="appSubmitDate" min="2017-01-02">
+              </div>
+              <div id="onlineInterviewDiv" class="form-group">
+                <label for="onlineInterviewDate">Online interview date:</label>
+                <input type="date" class="form-control" id="onlineInterviewDate" min="2017-01-02">
+              </div>
+              <div id="onsiteInterviewDiv" class="form-group">
+                <label for="onsiteInterviewDate">Onsite interview date:</label>
+                <input type="date" class="form-control" id="onsiteInterviewDate" min="2017-01-02">
+              </div>
+              <div id="offerDiv" class="form-group">
+                <label for="offerDate">Offer date:</label>
+                <input type="date" class="form-control" id="offerDate" min="2017-01-02">
+              </div>
+              <div class="form-group row">
+                <div class="col-4">
+                  <label class="radio-inline active">
+                    <input type="radio" id="toApply_radio" name="jobStatusRadio" value="ToApply" checked>To Apply
+                  </label>
+                </div>
+                <div class="col-3">
+                  <label class="radio-inline">
+                    <input type="radio" id="applied_radio" name="jobStatusRadio" value="Applied">Applied
+                  </label>
+                </div>
+                <div class="col-5">
+                  <label class="radio-inline">
+                    <input type="radio" id="online_radio" name="jobStatusRadio" value="OnlineInterview">Online Interview
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-4">
+                  <label class="radio-inline">
+                    <input type="radio" id="offered_radio" name="jobStatusRadio" value="Offered">Offer in hand
+                  </label>
+                </div>
+                <div class="col-3">
+                  <label class="radio-inline">
+                    <input type="radio" id="rejected_radio" name="jobStatusRadio" value="Rejected">Rejected
+                  </label>
+                </div>
+                <div class="col-5">
+                  <label class="radio-inline">
+                    <input type="radio" id="onsite_radio" name="jobStatusRadio" value="OnsiteInterview">Onsite Interview
+                  </label>
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" name="button" id="appSaveBtn" class="btn btn-outline-primary btn-sm">Save</button>
+                <button type="button" name="button" id="appDeleteBtn" class="btn btn-outline-primary btn-sm">Delete</button>
+              </div>
+            </form>
+          </div>
+          <!-- Modal footer -->
+          <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Document upload modal -->
+    <div class="modal fade" id="doc_uploadModal">
+      <div class="modal-dialog ">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Upload Document</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div id="upload_section">
+              <form>
+                <div class="form-group">
+                  <label for="targetName">Target Employer (optional):</label>
+                  <input type="text" class="form-control" id="targetName" placeholder="Leave blank if not applicable">
+                </div>
+                <div class="form-group">
+                  <label for="doc_type_option">Document Type (select one):</label>
+                  <select class="form-control" id="doc_type_option">
+                    <option value="CV" selected="selected">CV</option>
+                    <option value="Cover Letter">Cover Letter</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="choose_file">File:</label>
+                  <input type="file" id="choose_file" value="upload">
+                </div>
+                <div class="text-center">
+                  <button id="upload_btn" type="button" name="button" class="btn btn-outline-dark btn-sm">Upload</button>
+                </div>
+              </form>
+              <div id="progressBarContainer" class="progress">
+                <div id="progress_bar" class="progress-bar progress-bar-striped progress-bar-animated" style="width:1%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAi2sYwaWj09-8Ts3kaz3FglkO4TzMStVU",
+        authDomain: "job-hunting-assistant.firebaseapp.com",
+        databaseURL: "https://job-hunting-assistant.firebaseio.com",
+        projectId: "job-hunting-assistant",
+        storageBucket: "job-hunting-assistant.appspot.com",
+        messagingSenderId: "520037307694"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <script type="text/javascript" src="js/pro2.js"></script>
+  </body>
+
+</html>

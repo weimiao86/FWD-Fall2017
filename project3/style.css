@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Poppins');
+
+
+img.playerProfile {
+  max-height: 100px;
+}
+
+body{
+	background-color: aliceblue;
+	font-family: 'Poppins', sans-serif;
+
+}
+
+#whole{
+	background-color: royalblue;
+	margin-top: 40px;
+	padding-bottom: 20px;
+	border-radius: 20px;
+}
+
+h1{
+	font-family: 'Lobster', cursive;
+	color: gold;
+	font-size: 75px;
+}
+
+#players, #game{
+	background-color: aliceblue;
+	border-radius: 20px;
+}
+
+.questionButton{
+	color: white;
+	font-weight: bold;
+	font-size:40px;
+	background-color:royalblue;
+	border:none;
+	width: 100%;
+	padding: 20px 0px;
+	border-radius: 10px;
+	height: 200px;
+}
+
+.questionButton:active{
+	background-color: white;
+	color: royalblue;
+}
+
+.questionButton:hover{
+	background-color:deepskyblue;
+}
+
+.answerButton{
+	background-color: royalblue;
+	color: white;
+	border-radius: 5px;
+	border-style: none;
+}
+
+.answerButton:hover{
+	background-color:deepskyblue;
+}
+
+.answerButton:active{
+	background-color: white;
+	color: royalblue;
+}
+
+#players{
+	margin-bottom: 20px;
+}
+
+
+/*css flip found here: https://davidwalsh.name/css-flip
+*/
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	 .flip-container.flip .flipper {
+	transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	width: 320px;
+	height: 200px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+	border-radius: 10px;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+	color: white;
+	
+	border-radius: 10px;
+	padding-top: 15px;
+	overflow: auto;
+}
+
+#easy_question>.flipper>.back{
+	background-color: #28a745;
+}
+
+#medium_question>.flipper>.back{
+	color: royalblue;
+	background-color: gold;
+}
+
+#hard_question>.flipper>.back{
+	background-color: #dc3545;
+}
+
+/*end css flip
+*/
+
+#questions{
+	margin-bottom: 40px;
+}
+
+img.playerProfile{
+  max-height: 200px;
+  margin-top: 0 auto;
+  margin-bottom: 0 auto;
+}
+
+img.playerTurnIcon {
+  max-height: 60px;
+}
+
+img.playerActive {
+  display: none;
+}
+
+#end{
+	display: none;
+}
+
+#displayWinner{
+	font-family: 'Lobster', cursive;
+	color: royalblue;
+	font-size: 45px;
+}

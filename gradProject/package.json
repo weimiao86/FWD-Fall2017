@@ -1,0 +1,17 @@
+{
+  "name": "grad",
+  "version": "1.0.0",
+  "description": "graduate project",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "wei",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "chartjs-plugin-zoom": "^0.5.0",
+    "express": "^4.16.2",
+    "mysql": "^2.15.0"
+  }
+}

@@ -1,0 +1,507 @@
+/***********style sheet***********/
+
+body {
+    margin: 0;
+    background-color: white;
+}
+
+div.shell {
+    max-width: 98%;
+    margin: auto;
+}
+
+div#header_container {
+    background-image: url("../img/header_bg.jpeg");
+    background-size: 100% 100%;
+    height: 30vh;
+    min-height: 210px;
+}
+
+h1 {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: grey;
+    color: white;
+    cursor: default;
+    padding-left: 10px;
+    font-size: 3em;
+}
+
+nav#nav_container {
+    background-color: #333333;
+    bottom: 0;
+    overflow: hidden;
+    max-height: 40px;
+}
+
+.nav_fixed {
+    position: fixed;
+    width: 98%;
+    top: 0;
+    z-index: 1;
+}
+
+ul#nav_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+ul#nav_list li {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid #bbb;
+    padding: 0 10px;
+}
+
+ul#nav_list li a {
+    color: #bfbfbf;
+    text-decoration: none;
+    font-size: 1.4em;
+}
+
+ul#nav_list li:last-child {
+    border-right: none;
+}
+
+ul#nav_list li a:hover {
+    color: white;
+}
+
+.active {
+    background-color: rgba(255, 170, 0, 0.5);
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    background-image: url("../img/h2_bg3.png");
+    background-size: 100% 100%;
+    cursor: default;
+    margin-top: 15px;
+    margin-bottom: 1px;
+    border-top: double grey;
+    border-bottom: double grey;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+div#overview_content {
+    overflow: auto;
+    background-image: url("../img/background/section_bg1.jpg");
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+p.description {
+    text-align: justify;
+    margin-left: 10px;
+}
+
+p#overview_text {
+    float: left;
+    max-width: 55%;
+    margin-right: 5%;
+}
+
+div.image_conatiner {
+    float: left;
+    max-width: 30%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-height: 265px;
+}
+
+img.outGroup {
+    margin: 0 2px;
+    height: 265px;
+    border: 1px solid grey;
+    cursor: zoom-in;
+}
+
+div#groupImg {
+    display: flex;
+    flex-direction: column;
+}
+
+img.inGroup {
+    height: 130px;
+    border: 1px solid grey;
+    margin-bottom: 2px;
+    cursor: zoom-in;
+}
+
+img.content_imgs:hover {
+    opacity: 0.7;
+}
+
+div.clear_float {
+    clear: both;
+}
+
+div#causes_bg {
+    background-image: url("../img/background/section_bg1.jpg");
+    padding-bottom: 10px;
+}
+
+div#causes_content {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+h3.causes_h3 {
+    text-align: center;
+}
+
+div.causes_flex_item {
+    padding-right: 2%;
+    flex-grow: 1;
+}
+
+div#causesImg_content img {
+    display: block;
+    margin: 0 auto;
+    max-width: 70%;
+    border: double grey;
+}
+
+div#relevance_content {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-image: url("../img/background/section_bg1.jpg");
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+div#relevance_text {
+    max-width: 30%;
+    margin-right: 5%;
+    flex-grow: 1;
+}
+
+div#relevance_list {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-grow: 2;
+    border-left: 1px solid grey;
+    padding-left: 5%;
+    padding-top: 10px;
+}
+
+div#scroll_list {
+    width: 100px;
+    height: 300px;
+    overflow-y: auto;
+    margin-right: 5%;
+    border: 2px solid gray;
+}
+
+div#scroll_list a {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+div#scroll_list a:hover {
+    background-color: #ccc;
+}
+
+div#scroll_list a.activeItem {
+    background-color: #4CAF50;
+    color: white;
+}
+
+img#virtual_water_img {
+    height: 300px;
+    max-width: 500px;
+    border: 2px solid gray;
+    left: 150px;
+    top: 30px;
+    bottom: 400px;
+}
+
+div#saveWater_bg {
+    background-image: url("../img/background/section_bg1.jpg");
+    padding-top: 10px;
+}
+
+div#saveWaterContent {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border: ridge;
+    background-color: rgba(204, 238, 255, 0.3);
+}
+
+div#input_section {
+    margin-left: 10%;
+}
+
+select#region {
+    width: 100%;
+    height: 30px;
+    font-size: 1.0em;
+}
+
+#gallon_input {
+    height: 20px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#submintGallons {
+    margin: 0 auto;
+    font-size: 1.0em;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    outline: none;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    *box-shadow: 0 8px #999;
+}
+
+#submintGallons:hover {
+    background-color: #3e8e41;
+}
+
+#submintGallons:active {
+    background-color: #3e8e41;
+    box-shadow: 0 3px #666;
+    transform: translateY(2px);
+}
+
+div#reuslt_section {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: 10%;
+    max-width: 50%;
+    margin-left: 10%;
+}
+
+p#waterResult {
+    font-style: italic;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+img#goodtobad {
+    max-width: 150px;
+    max-height: 150px;
+    margin-right: 15%;
+    margin-top: 20px;
+}
+
+div#savewater_container h3 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+div#savewater_container h4 {
+    cursor: pointer;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 10px;
+}
+
+h4#kitchen_h4 {
+    background-color: rgba(153, 77, 0, 0.3);
+}
+
+div#kitchen_tips {
+    background-color: rgba(153, 77, 0, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+h4#bath_h4 {
+    background-color: rgba(153, 255, 255, 0.4);
+}
+
+div#bathroom_tips {
+    background-color: rgba(153, 255, 255, 0.4);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+h4#outdoor_h4 {
+    background-color: rgba(57, 230, 0, 0.3);
+}
+
+div#outdoor_tips {
+    background-color: rgba(57, 230, 0, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+h4#office_h4 {
+    background-color: rgba(102, 179, 255, 0.3);
+}
+
+div#office_tips {
+    background-color: rgba(102, 179, 255, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+div#tips_container {
+    background-color: rgba(204, 238, 255, 0.3);
+    display: flex;
+    flex-wrap: wrap;
+    border: ridge;
+}
+
+div.tips_section {
+    width: 45%;
+}
+
+div.even {
+    margin-right: 8%;
+}
+
+div.tips_text {
+    display: none;
+}
+
+div.tips_text p {
+    text-align: justify;
+}
+
+footer {
+    background-image: url("../img/background/section_bg3.jpg");
+    background-size: 100% 100%;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: double grey;
+}
+
+div#footer_container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+div#link_section1 h3 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+div#link_section2 h3 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+div#link_section2 a {
+    text-decoration: none;
+}
+
+a.footer_links {
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+img#footer_img {
+    margin-top: 0px;
+    max-height: 144px;
+}
+
+
+/**************modal pop************/
+
+div.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+img.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    cursor: zoom-out;
+}
+
+div#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}

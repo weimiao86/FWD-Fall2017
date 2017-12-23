@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>lab1</title>
+  <link rel="stylesheet" href="lab1_style.css" style="text/css">
+  <script src="lab1_js.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div id=shell>
+    <h1>ORDER A FAST FOOD</h1>
+    <h2>Do you prefer pizza or burrito?</h2>
+    <div id=choose>
+      <img id="pizza-img" src="pizza.jpg" alt="pozza">
+      <img id="burrito-img" src="burrito.jpg" alt="burrito">
+    </div>
+    <div class="after-box"></div>
+    <div id="store">
+      <h2>Store in Boulder</h2>
+      <form id="pizza_store" class="hide">
+        <input type="radio" name="pizza" value="Backcountry Pizza and Taphouse" checked> Backcountry Pizza and Taphouse<br>
+        <input type="radio" name="pizza" value="Pizzeria Da Lupo"> Pizzeria Da Lupo<br>
+        <input type="radio" name="pizza" value="Beau Jo's Boulder"> Beau Jo's Boulder
+      </form>
+      <form id="burrito_store" class="hide">
+        <input type="radio" name="burrito" value="Cafe Mexicali" checked> Cafe Mexicali<br>
+        <input type="radio" name="burrito" value="Illegal Pete'"> Illegal Pete's<br>
+        <input type="radio" name="burrito" value="Verde"> Verde
+      </form>
+
+    </div>
+    <div id="hotArea">
+      <h2>Place a order</h2>
+      <form>
+        <input id="ifhot" type="checkbox" name="spicy" value="spicy"> Spicy
+      </form>
+    </div>
+    <div>
+      <input type="button" id="placeOrder" value="ORDER">
+    </div>
+    <div id="summary">
+      <p id="preinfo"> </p>
+      <p id="orderDetail"> </p>
+    </div>
+
+  </div>
+</body>
+
+</html>

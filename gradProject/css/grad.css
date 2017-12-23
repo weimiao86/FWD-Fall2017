@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  background-image: url("../img/bg2.jpg");
+  z-index: -1;
+}
+
+div#shell {
+  padding-top: 60px;
+  padding-bottom: 10px;
+  background-color: white;
+  min-height: 100vh;
+}
+
+div#query_section {
+  padding-bottom: 5px;
+}
+
+div.chart_container {
+  padding-top: 10px;
+  margin-bottom: 20px;
+}

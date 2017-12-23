@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  background-image: url("../img/bg2.jpg");
+  z-index: -1;
+}
+
+div#shell {
+  min-height: 100vh;
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: white;
+}
+
+div#title_holder {
+  padding-left: 10px;
+}
+
+h1#title {
+  margin-bottom: 0;
+  display: inline-block;
+  cursor: default;
+  margin-top: 5px;
+}
+
+p {
+  cursor: default;
+}
+
+div#header_section {
+  padding: 0;
+  margin: 0;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  background-image: url("../img/header_background_5.jpg");
+  background-size: 100% 100%;
+}
+
+div#profile_section {
+  text-align: right;
+  padding-right: 25px;
+}
+
+img#userImg {
+  max-height: 100px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+#choose_profileImg {
+  display: block;
+  height: 0;
+  width: 0;
+}
+
+p#greetingName {
+  margin-bottom: 0;
+}
+
+#signInBtn {
+  margin-right: 5px;
+}
+
+#signOutBtn {
+  margin-right: 5px;
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  /* Set the fixed height of the footer here */
+  line-height: 50px;
+  /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+
+div#app_view {
+  margin-top: 10px;
+  overflow-x: scroll;
+}
+
+div.jobapp {
+  margin-right: 5px;
+  height: 66vh;
+}
+
+ul.companyList {
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+div.jobapp:last-child {
+  margin-right: 0;
+}
+
+.formNarrow {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+div#createAcnt {
+  margin-top: -18px;
+  margin-bottom: 10px;
+}
+
+div#signinTabContent {
+  margin-top: 15px;
+}
+
+div#social_section {
+  margin: 0 auto;
+}
+
+#facebookBtn {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+div.doc_div {
+  height: 60vh;
+  margin-right: 5px;
+}
+
+div.doc_div:first-child {
+  margin-left: 5px;
+}
+
+div.mrg_top {
+  margin-top: 5px;
+}
+
+div#progressBarContainer {
+  margin-top: 10px;
+}
+
+div#overview_center {
+  margin-top: 60px;
+}
+
+div#overview_center2 {
+  margin-top: 60px;
+}

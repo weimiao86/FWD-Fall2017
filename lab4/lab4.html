@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+  <!--
+API: https://newsapi.org/#apiArticles
+-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab4</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="css/lab4.css" type="text/css">
+  </head>
+
+  <body>
+    <div id="shell">
+      <h1>Top News</h1>
+      <div id="filter_section">
+        <form>
+          <select id="category_selection">
+            <option value="">Category-All</option>
+            <option value="business">Business</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="gaming">Gaming</option>
+            <option value="general">General</option>
+            <option value="music">Music</option>
+            <option value="politics">Politics</option>
+            <option value="science-and-nature">Science and Nature</option>
+            <option value="sport">Sport</option>
+            <option value="technology">Technology</option>
+          </select>
+
+          <select id="lang_selection">
+            <option value="">Language-All</option>
+            <option value="en">English</option>
+            <option value="de">German</option>
+          </select>
+
+          <select id="country_selection">
+            <option value="">Country-All</option>
+            <option value="au">Australia</option>
+            <option value="de">Germany</option>
+            <option value="gb">United Kingdom</option>
+            <option value="in">India</option>
+            <option value="it">Italy</option>
+            <option value="us">United States</option>
+          </select>
+
+          <select id="source_selection">
+            <option value="" disabled selected hidden>News Sources</option>
+          </select>
+
+          <button id="show_news" type="button" name="button">Search</button>
+        </form>
+      </div>
+      <div id="news_section">
+
+      </div>
+    </div>
+    <script type="text/javascript" src="js/lab4.js"></script>
+  </body>
+
+</html>

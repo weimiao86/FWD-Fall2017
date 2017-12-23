@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observations</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+      integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <!-- font-awesome icon -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- my CSS -->
+    <link rel="stylesheet" href="obs.css">
+  </head>
+
+  <body>
+    <div class="container p-3">
+      <h1 class="text-center">Avalanche Awareness</h1>
+      <div class="row">
+        <div class="col">
+          <h2 class="text-center"><a href="index.html">Home</a></h2>
+        </div>
+        <div class="col">
+          <h2 class="text-center"><a href="weather.html">Weather</a></h2>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <img class="img-fluid" src="img/banner4.jpg" alt="banner4">
+      </div>
+
+      <div class="text-center mt-5">
+        <h3>Submit Observation</h3>
+        <div id="formelement">
+          <form id="order_form" method="post" action="">
+
+            <p>
+              <label for="name" class="label">Name</label>
+              <input name="name" type="text" id="name" size="36" required>
+            </p>
+            <p>
+              <label for="email" class="label">Email</label>
+              <input name="email" id="email" type="email" size="36">
+            </p>
+            <p>
+              <label for="phone" class="label">Phone</label>
+              <input name="phone" type="text" id="phone" size="36">
+            </p>
+
+            <p>
+              Did you see any avalanches?<br>
+              <input type="radio" name="avalanche" id="avalanche_yes" value="Yes">
+              <label for="avalanche_yes">Yes</label>
+              <br>
+              <input type="radio" name="avalanche" id="avalanche_no" value="No">
+              <label for="avalanche_no">No</label>
+            </p>
+            <p>
+              Did you trigger any avalanches?<br>
+              <input type="radio" name="trigger" id="trigger_yes" value="Yes">
+              <label for="trigger_yes">Yes</label>
+              <br>
+              <input type="radio" name="trigger" id="trigger_no" value="No">
+              <label for="trigger_no">No</label>
+            </p>
+            <p>
+              Was anyone caught in an avalanche?<br>
+              <input type="radio" name="caught" id="caught_yes" value="Yes">
+              <label for="caught_yes">Yes</label>
+              <br>
+              <input type="radio" name="caught" id="caught_no" value="No">
+              <label for="caught_no">No</label>
+            </p>
+            <p>
+              <label for="location" class="label">Location</label>
+              <input name="location" type="text" id="location" size="36">
+            </p>
+            <p>
+              <label for="description" class="label">Description</label><br>
+              <textarea id="description" rows="5" cols="30">
+  	</textarea>
+            </p>
+            <p>
+              <input type="submit" id="enter" value="Submit Observation">
+            </p>
+          </form>
+        </div>
+      </div>
+
+      <div class="mt-5">
+        <h3 class="text-center">Recorded Observations</h3>
+        <div class="row mt-5">
+          <div class="col">
+            <h4>Name</h4>
+          </div>
+          <div class="col">
+            <h4>Location</h4>
+          </div>
+          <div class="col">
+            <h4>Saw an avalanche</h4>
+          </div>
+          <div class="col">
+            <h4>Trigged an avalanche</h4>
+          </div>
+          <div class="col">
+            <h4>Caught in an avalanche</h4>
+          </div>
+          <div class="col">
+            <h4>Description</h4>
+          </div>
+        </div>
+        <div id="results" class="row mt-5">
+          <div id="result_name" class="col">
+
+          </div>
+          <div id="result_location" class="col">
+
+          </div>
+          <div id="result_saw" class="col">
+
+          </div>
+          <div id="result_trigger" class="col">
+
+          </div>
+          <div id="result_caught" class="col">
+
+          </div>
+          <div id="result_desc" class="col">
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+    <!-- jQuery and bootstrap js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+      crossorigin="anonymous"></script>
+
+    <!-- Firebase js -->
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCaNE8c8dyKiMh1H41AVpi0Wtyzp79P5s0",
+        authDomain: "fwd-final-6df4e.firebaseapp.com",
+        databaseURL: "https://fwd-final-6df4e.firebaseio.com",
+        projectId: "fwd-final-6df4e",
+        storageBucket: "fwd-final-6df4e.appspot.com",
+        messagingSenderId: "544985554589"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <!-- my js -->
+    <script type="text/javascript" src="observation.js"></script>
+
+
+  </body>
+
+</html>

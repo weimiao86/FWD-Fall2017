@@ -1,0 +1,39 @@
+body {
+    margin: 0px;
+    background-color: white;
+}
+
+div#shell {
+    max-width: 98%;
+    margin: 5px auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-bottom: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img#scenery_img {
+    display: block;
+    margin: 0 auto;
+    max-width: 70%;
+    border: double grey;
+    max-height: 50vh;
+}
+
+p {
+    text-align: center;
+}

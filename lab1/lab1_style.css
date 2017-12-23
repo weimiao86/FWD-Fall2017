@@ -1,0 +1,44 @@
+h1{
+  text-align: center;
+}
+
+div#shell{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+div#choose{
+  overflow: auto;
+  height: 200px;
+}
+
+div#after-box{
+  clear: both;
+}
+
+img{
+  float: left;
+  max-width: 100px;
+  margin-right: 50px;
+
+}
+
+img:hover{
+  max-width: 250px;
+}
+
+div#hotArea{
+  display: inline-block;
+}
+
+.hide{
+  display: none;
+}
+.show{
+  display: block;
+}
+
+#placeOrder{
+  margin-top: 20px;
+  border-style: ridge;
+}

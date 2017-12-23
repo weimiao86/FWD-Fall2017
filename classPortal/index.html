@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Wei Miao</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="media/img/homeImg/wm.jpg">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+      integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+  </head>
+
+  <body>
+    <div class="container" id="shell">
+      <!-- head section -->
+      <div class="jumbotron" id="head_container">
+        <div class="container row">
+          <div class="col-2">
+            <img class="img-thumbnail" id="my_photo" src="media/img/homeImg/wei_photo.jpg" alt="my_photo">
+          </div>
+          <div class="col-10">
+            <h1 class="display-4 font-weight-bold">Wei Miao</h1>
+            <h3>
+            <a href="http://atlas.colorado.edu/academics/programs/ctd-track/">CTD</a> | TMS | ATLAS </h3>
+            <h4>Web Front-End Development Fall 2017</h4>
+          </div>
+        </div>
+      </div>
+      <!-- nav bar  -->
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="my_nav">
+        <ul id="nav_ul" class="navbar-nav">
+          <li id="about_nav" class="nav-item active">
+            <a class="nav-link" href="#about_me">About</a>
+          </li>
+          <li id="labs_nav" class="nav-item">
+            <a class="nav-link" href="#labs_container">Labs</a>
+          </li>
+          <li id="projects_nav" class="nav-item">
+            <a class="nav-link" href="#projects_container">Projects</a>
+          </li>
+          <li id="news_nav" class="nav-item">
+            <a class="nav-link" href="#news_container">News</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- about me -->
+      <div class="container row" id="about_me">
+        <div class="col">
+          <h1 class="text-center">About</h1>
+          <p>Wei is a first year master student in Creative Technologies + Design track (CTD) at CU ATLAS.
+            He has the background in Comptuter Science and he is very interested in Robotics.
+          </p>
+          <p>He also has the development experience with micro-controllers and diigtal sensors, and ever
+            led the design and development of <a href="http://www.robauto.co/" target="_blank">BiBli</a>robot.</p>
+          <p>He is also familiar with mobile app development and 3D design with SolidWorks.</p>
+          <a class="border border-info rounded p-2 mt-1" href="wei_resume.pdf" target="_blank">View CV</a>
+        </div>
+        <div class="col" id="project_gallery">
+          <div id="project_slides" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#project_slides" data-slide-to="0" class="active"></li>
+              <li data-target="#project_slides" data-slide-to="1"></li>
+              <li data-target="#project_slides" data-slide-to="2"></li>
+              <li data-target="#project_slides" data-slide-to="3"></li>
+              <li data-target="#project_slides" data-slide-to="4"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="img-fluid img-thumbnail mySlides" src="media/img/aboutMe/owi.jpg" alt="my projects img">
+              </div>
+              <div class="carousel-item">
+                <img class="img-fluid img-thumbnail mySlides" src="media/img/aboutMe/bibli1.jpg" alt="my projects img">
+              </div>
+              <div class="carousel-item">
+                <img class="img-fluid img-thumbnail mySlides" src="media/img/aboutMe/bibli2.jpg" alt="my projects img">
+              </div>
+              <div class="carousel-item">
+                <img class="img-fluid img-thumbnail mySlides" src="media/img/aboutMe/bibli3.jpg" alt="my projects img">
+              </div>
+              <div class="carousel-item">
+                <img class="img-fluid img-thumbnail mySlides" src="media/img/aboutMe/mirabot.jpg" alt="my projects img">
+              </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#project_slides" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#project_slides" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- labs  -->
+      <div class="container pt-5" id="labs_container">
+        <div class="row">
+          <div class="col-4 text-center">
+            <h2>Lab 1</h2>
+            <h4><a href="lab1/lab1.html" target="_blank">Order a Fast Food</a></h4>
+            <small>9/11/2017</small>
+          </div>
+          <div class="col-4 text-center">
+            <h2>Lab 2</h2>
+            <h4><a href="lab2/debug_js.html" target="_blank">Debug</a></h4>
+            <small> 9/14/2017</small>
+          </div>
+          <div class="col-4 text-center">
+            <h2>Lab 3</h2>
+            <h4><a href="lab3/lab3.html" target="_blank">Boulder Farmers Market</a></h4>
+            <small>9/29/2017</small>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-4 text-center">
+            <h2>Lab 4</h2>
+            <h4><a href="lab4/lab4.html" target="_blank">Top News</a></h4>
+            <small>10/20/2017</small>
+          </div>
+          <div class="col-4 text-center">
+            <h2>Lab 5</h2>
+            <h4><a href="lab5/lab5.html" target="_blank">Online Album</a></h4>
+            <small>10/28/2017</small>
+          </div>
+          <div class="col-4 text-center">
+            <h2>Lab 6</h2>
+            <h4><a href="http://creative.colorado.edu/~wemi4704/fwd/lab6/" target="_blank">Keyboard Spectrum</a></h4>
+            <small>12/02/2017</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- projects page -->
+      <div class="container pt-2 pb-5" id="projects_container">
+        <h3><a href="https://weimiaoblog.wordpress.com/" target="_blank">Projects Journal Entry</a></h3>
+
+        <h3><a href="http://creative.colorado.edu/~wemi4704/fwd/index.html" target="_blank">Class Portal</a></h3>
+        <ul class="mileStone" id="class_portal_milestones">
+          <li><a href="https://weimiaoblog.wordpress.com/2017/09/10/project-1-class-portal-milestone1/" target="_blank">MileStone 1</a></li>
+          <li><a href="https://weimiaoblog.wordpress.com/2017/09/18/class-portalmilestone2/" target="_blank">MileStone 2</a></li>
+        </ul>
+        <h3><a href="project1/project1.html" target="_blank">Project 1</a></h3>
+        <ul class="mileStone" id="project1_milestones">
+          <li><a href="https://weimiaoblog.wordpress.com/2017/09/20/project-1-milestone-1/" target="_blank">MileStone 1</a></li>
+          <li><a href="project1/project1.html" target="_blank">MileStone 2</a>
+            <a href="https://weimiaoblog.wordpress.com/2017/09/26/project-1-milestone-2/" target="_blank"> | Journal</a>
+          </li>
+          <li><a href="project1/project1.html" target="_blank">MileStone 3</a>
+          </li>
+        </ul>
+        <h3><a href="midterm/midterm.html" target="_blank">Midterm</a></h3>
+        <h3><a href="project2/project2.html" target="_blank">Project 2</a></h3>
+        <ul class="mileStone" id="project2_milestones">
+          <li><a href="https://weimiaoblog.wordpress.com/2017/10/24/587/" target="_blank">MileStone 1</a></li>
+          <li><a href="project2/project2.html" target="_blank">MileStone 2</a></li>
+          <li><a href="project2/project2.html" target="_blank">MileStone 3</a></li>
+        </ul>
+        <h3><a href="gradProject/grad.html" target="_blank">Graduate Project</a></h3>
+        <ul class="mileStone" id="gradProject_milestones">
+          <li><a href="https://weimiaoblog.wordpress.com/2017/11/07/graduate-project-milestone-1/" target="_blank">MileStone 1</a></li>
+          <li><a href="gradProject/grad.html" target="_blank">MileStone 2</a></li>
+          <li><a href="gradProjectM3/index/grad.html" target="_blank">MileStone 3</a></li>
+        </ul>
+        <h3>Project 3</h3>
+        <ul class="mileStone" id="project3_milestones">
+          <li><a href="https://weimiaoblog.wordpress.com/2017/11/28/project-3-milestone-1/" target="_blank">MileStone 1</a></li>
+          <li><a href="https://sambleffler.tumblr.com/post/168224191659/project-3-milestone-2" target="_blank">MileStone 2</a></li>
+          <li><a href="project3/index.html" target="_blank">MileStone 3</a></li>
+          <li><a href="https://weimiaoblog.wordpress.com/2017/12/14/project-3-milestone-4/" target="_blank">MileStone 4</a></li>
+        </ul>
+        <h3><a href="final/index.html" target="_blank">Final</a></h3>
+      </div>
+
+      <!-- news page -->
+      <div class="container" id="news_container">
+        <h3 class="text-center">MiraBot Devekopment Progress</h3>
+        <div class="row">
+          <div class="col ">
+            <h4>Sep 2016: Start building first MiraBot</h4>
+            <iframe class="embed-responsive-item " src="https://www.youtube.com/embed/KIv-_gi10Lk" allowfullscreen></iframe>
+          </div>
+
+          <div class="col ">
+            <h4>Jan 2017: MiraBot Testing</h4>
+            <iframe class="embed-responsive-item " src="https://www.youtube.com/embed/b8p3W-ne9Jg" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- footer -->
+    <footer class="container pt-0 text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="socialIcon">
+              <!--Email -->
+              <a class="icons-sm gplus-ic" href="mailto:wei.miao@colorado.edu"><i class="fa fa-envelope-o fa-lg text-white mr-md-4"> </i></a>
+              <!--Facebook-->
+              <a class="icons-sm fb-ic" href="https://www.facebook.com/weimiao677"><i class="fa fa-facebook-square fa-lg text-white mr-md-4"> </i></a>
+              <!--github-->
+              <a class="icons-sm tw-ic" href="https://github.com/weimiao86"><i class="fa fa-github fa-lg text-white mr-md-4"> </i></a>
+              <!--Linkedin-->
+              <a class="icons-sm li-ic" href="https://www.linkedin.com/in/weimiao677/"><i class="fa fa-linkedin-square fa-lg text-white mr-md-4"> </i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright text-center">
+        <div class="container-fluid text-center">
+          <small class="text-secondary text-center">© 2017 Copyright: <a class="text-info" href="http://weimiao86.github.io/"> Wei Miao </a></small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/home_js.js"></script>
+  </body>
+
+</html>

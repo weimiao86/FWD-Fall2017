@@ -1,0 +1,39 @@
+/******* style for aboutMe Page ********/
+
+body {
+  margin: 5px;
+  background-repeat:repeat-x repeat-y;
+  background-image: url("../media/img/aboutMe/home_bg.jpg");
+  z-index: -2;
+}
+
+.mySlides{
+  display: none;
+  max-width: 400px;
+  border-style: ridge;
+  border-color: white;
+}
+
+div#main_shell{
+  overflow: auto;
+}
+
+div#content_me{
+  float: left;
+  width: 45%;
+  padding-left: 10px;
+  margin-right: 120px;
+}
+div#content_me p{
+  text-align: justify;
+}
+.after-box{
+  clear: left;
+}
+
+div#img_section{
+  float: left;
+  width: 30%;
+  padding: 10px;
+  padding-top: 35px;
+}
